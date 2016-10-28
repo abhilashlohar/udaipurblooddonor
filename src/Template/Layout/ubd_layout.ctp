@@ -42,7 +42,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="mbr-navbar__container">
                 <div class="mbr-navbar__column mbr-navbar__column--s mbr-navbar__brand">
                     <span class="mbr-navbar__brand-link mbr-brand mbr-brand--inline">
-                        <span class="mbr-brand__logo"><a href="/"><img class="mbr-navbar__brand-img mbr-brand__img" src="<?php echo $this->request->webroot; ?>assets/ubd-images/logo.png" alt="Mobirise"></a></span>
+                        <span class="mbr-brand__logo">
+						<?php echo $this->Html->link(
+							$this->Html->image('/assets/ubd-images/logo.png',['class'=>'mbr-navbar__brand-img mbr-brand__img']),
+							'/',['escape'=>false]
+						) ?>
+						
+						</span>
                     </span>
                 </div>
                 <div class="mbr-navbar__hamburger mbr-hamburger text-white"><span class="mbr-hamburger__line"></span></div>
@@ -52,12 +58,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 							<ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
 							
 								<li class="mbr-navbar__item"><?php echo $this->Html->link( 'HOME', '/',['class'=>'mbr-buttons__link btn text-white'] ); ?></li>
-								<li class="mbr-navbar__item"><?php echo $this->Html->link( 'ABOUT US', '/',['class'=>'mbr-buttons__link btn text-white'] ); ?></li>
+								<li class="mbr-navbar__item"><?php echo $this->Html->link( 'ABOUT US', '/About-Us',['class'=>'mbr-buttons__link btn text-white'] ); ?></li>
 								
 							</ul>
 						</div>
 						
-                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active"><li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-default" href="new-donor.html">BECOME A DONOR</a></li></ul></div>
+                        <div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
+								
+						<li class="mbr-navbar__item"><?php echo $this->Html->link( 'BECOME A DONOR', '/Become-Donor',['class'=>'mbr-buttons__btn btn btn-default'] ); ?></li>
+						
+						</ul></div>
                     </nav>
                 </div>
             </div>
@@ -76,7 +86,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div>
 				<a href="blood-camps.html" style="text-decoration: none;">
 					<div class="thumbnail">
-						<div class="image"><img class="undefined" src="<?php echo $this->request->webroot; ?>assets/images/blood-camp-1.png"></div>
+						<div class="image">
+						<?php echo $this->Html->link(
+							$this->Html->image('/assets/images/blood-camp-1.png',['class'=>'undefined']),
+							'/Blood-Camp',['escape'=>false]
+						) ?>
+						</div>
 						<div class="caption">
 							<div>
 								<h3>BLOOD CAMPS</h3>
@@ -90,7 +105,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div>
 				<a href="blood-banks.html" style="text-decoration: none;">
 					<div class="thumbnail">
-						<div class="image"><img class="undefined" src="<?php echo $this->request->webroot; ?>assets/images/blood-bank.png"></div>
+						<div class="image">
+						
+						<?php echo $this->Html->link(
+							$this->Html->image('/assets/images/blood-bank.png',['class'=>'undefined']),
+							'/Blood-Bank',['escape'=>false]
+						) ?>
+						
+						</div>
 						<div class="caption">
 							<div>
 								<h3>BLOOD BANKS</h3>
@@ -104,7 +126,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div>
 				<a href="new-donor.html" style="text-decoration: none;">
 					<div class="thumbnail">
-						<div class="image"><img class="undefined" src="<?php echo $this->request->webroot; ?>assets/images/blood-doante.png"></div>
+						<div class="image">
+						
+						<?php echo $this->Html->link(
+							$this->Html->image('/assets/images/blood-doante.png',['class'=>'undefined']),
+							'/Become-Donor',['escape'=>false]
+						) ?>
+						
+						</div>
 						<div class="caption">
 							<div>
 								<h3>BECOME A DONOR</h3>

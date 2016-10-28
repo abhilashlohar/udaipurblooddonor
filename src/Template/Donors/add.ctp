@@ -49,7 +49,7 @@
 								<div class="col-md-6">
 									
 									<?php $options=['A+'=>'A+','A-'=>'A-','B+'=>'B+','B-'=>'B-','AB+'=>'AB+','AB-'=>'AB-','O+'=>'O+','O-'=>'O-'];
-										echo $this->Form->input('preferred_remider',['options'=>$options,'class'=>'form-control']); ?>
+										echo $this->Form->input('blood_group',['options'=>$options,'class'=>'form-control']); ?>
 								</div>
 							</div><br/>
 							<div class="row">

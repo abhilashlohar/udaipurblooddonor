@@ -19,6 +19,18 @@ class DonorsController extends AppController
 	public function AboutUs()
     {
         $this->viewBuilder()->layout('ubd_layout');
+		
+    }
+	
+	public function BloodCamp()
+    {
+        $this->viewBuilder()->layout('ubd_layout');
+	}
+	
+	
+		public function BloodBank()
+    {
+        $this->viewBuilder()->layout('ubd_layout');
     }
     /**
      * Index method
@@ -62,6 +74,9 @@ class DonorsController extends AppController
         $donor = $this->Donors->newEntity();
         if ($this->request->is('post')) {
             $donor = $this->Donors->patchEntity($donor, $this->request->data);
+			
+			$donor->previous_blood_donation_date=date('Y-m-d',strtotime($donor->previous_blood_donation_date));
+			//pr ($donor); exit;
             if ($this->Donors->save($donor)) {
                 $this->Flash->success(__('The donor has been saved.'));
 
@@ -119,4 +134,6 @@ class DonorsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+	
+
 }

@@ -28,28 +28,24 @@
 									<th scope="col"><?= $this->Paginator->sort('blood_group') ?></th>
 									<th scope="col"><?= $this->Paginator->sort('previous_blood_donation_date') ?></th>
 									<th scope="col"><?= $this->Paginator->sort('preferred_remider') ?></th>
-									<th scope="col" class="actions"><?= __('Actions') ?></th>
+									
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($donors as $donor): ?>
+								<?php $i=0; foreach ($donors as $donor): $i++ ?>
 								<tr>
-									<td><?= $this->Number->format($donor->id) ?></td>
+									<td><?= h($i); ?></td>
 									<td><?= h($donor->name) ?></td>
 									<td><?= h($donor->gender) ?></td>
 									<td><?= $this->Number->format($donor->age) ?></td>
 									<td><?= $this->Number->format($donor->weight) ?></td>
 									<td><?= h($donor->email) ?></td>
-									<td><?= $this->Number->format($donor->mobile) ?></td>
+									<td><?= h($donor->mobile) ?></td>
 									<td><?= h($donor->landmark) ?></td>
 									<td><?= h($donor->blood_group) ?></td>
 									<td><?= h($donor->previous_blood_donation_date) ?></td>
 									<td><?= h($donor->preferred_remider) ?></td>
-									<td class="actions">
-										<?= $this->Html->link(__('View'), ['action' => 'view', $donor->id]) ?>
-										<?= $this->Html->link(__('Edit'), ['action' => 'edit', $donor->id]) ?>
-										<?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $donor->id], ['confirm' => __('Are you sure you want to delete # {0}?', $donor->id)]) ?>
-									</td>
+									
 								</tr>
 								<?php endforeach; ?>
 							</tbody>

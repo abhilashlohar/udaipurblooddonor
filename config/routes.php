@@ -51,6 +51,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     //$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 	$routes->connect('/', ['controller' => 'Donors', 'action' => 'home']);
+	$routes->connect('About-Us', ['controller' => 'Donors', 'action' => 'AboutUs']);
+	$routes->connect('Become-Donor', ['controller' => 'Donors', 'action' => 'add']);
+	$routes->connect('Blood-Camp', ['controller' => 'Donors', 'action' => 'BloodCamp']);
+	$routes->connect('Blood-Bank', ['controller' => 'Donors', 'action' => 'BloodBank']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.

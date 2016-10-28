@@ -82,10 +82,7 @@ class DonorsTable extends Table
             ->requirePresence('blood_group', 'create')
             ->notEmpty('blood_group');
 
-        $validator
-            ->date('previous_blood_donation_date')
-            ->requirePresence('previous_blood_donation_date', 'create')
-            ->notEmpty('previous_blood_donation_date');
+
 
         $validator
             ->requirePresence('preferred_remider', 'create')
