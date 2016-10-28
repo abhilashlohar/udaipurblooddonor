@@ -15,6 +15,11 @@ class DonorsController extends AppController
     {
         $this->viewBuilder()->layout('ubd_layout');
     }
+	
+	public function AboutUs()
+    {
+        $this->viewBuilder()->layout('ubd_layout');
+    }
     /**
      * Index method
      *
